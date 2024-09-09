@@ -1,0 +1,14 @@
+name: Deploy Application Trackingcoach
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  call-parent-deploy-workflow:
+    name: Shared Workflow
+    uses: creativeorange/github-workflows/.github/workflows/deploy.yml@main
+    with:
+      server-config: servers-main.json
+    secrets: inherit

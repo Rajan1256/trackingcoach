@@ -1,0 +1,23 @@
+<x-slot name="intro">
+    <div class="bg-white px-4 py-5 sm:px-6">
+        <div class="-ml-4 -mt-4 flex justify-between items-center flex-wrap sm:flex-nowrap">
+            <div class="ml-4 mt-4">
+                @if (!empty($title))
+                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                        {{ $title ?? '' }}
+                    </h3>
+                @endif
+                @if(!empty($description))
+                    <p class="mt-1 text-sm text-gray-500">
+                        {{ $description }}
+                    </p>
+                @endif
+            </div>
+            @if(!empty($buttons))
+                <div class="ml-4 mt-4 flex-shrink-0">
+                    {{ $buttons }}
+                </div>
+            @endif
+        </div>
+    </div>
+</x-slot>

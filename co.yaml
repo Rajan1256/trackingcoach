@@ -1,0 +1,7 @@
+driver: laravel
+remote:
+  host: web-1.creativeorange.nl
+  username: trackingcoachcom
+  path: ~/trackingcoach.com
+extra:
+  - php artisan co:sync:finished

@@ -1,0 +1,11 @@
+[
+    {
+        "name": "app-2",
+        "ip": "116.203.70.37",
+        "username": "trackingcoach",
+        "port": "22",
+        "beforeHooks": "$PHP artisan horizon:pause && $PHP artisan migrate --force && $PHP artisan config:cache && $PHP artisan route:cache && $PHP artisan view:cache",
+        "afterHooks": "$PHP artisan horizon:terminate",
+        "path": "/home/trackingcoach/trackingcoach.com"
+    }
+]
